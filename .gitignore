@@ -1,0 +1,18 @@
+# Node modules
+frontend/node_modules/
+backend/venv/
+
+# Environment variables
+*.env
+
+# Build folders
+frontend/build/
+frontend/dist/
+backend/__pycache__/
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,130 @@
+/* src/styles/main.css */
+
+/* Reset some basic defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set base font and background */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container Utility */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-primary {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-danger {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Forms */
+  input, select, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  label {
+    font-weight: 500;
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  /* Cards */
+  .card {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+  }
+  
+  /* Alerts */
+  .alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 0.5rem;
+    }
+  }
+  
