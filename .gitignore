@@ -11,6 +11,8 @@ frontend/.env
 frontend/build/
 frontend/dist/
 backend/__pycache__/
+**/__pycache__/
+*.pyc
 
 # Logs
 *.log
