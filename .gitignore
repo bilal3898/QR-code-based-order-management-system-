@@ -24,3 +24,6 @@ Thumbs.db
 # Markdown files (except README.md)
 *.md
 !README.md
+
+# Project specific
+dummy
