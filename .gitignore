@@ -4,6 +4,8 @@ backend/venv/
 
 # Environment variables
 *.env
+backend/.env
+frontend/.env
 
 # Build folders
 frontend/build/
@@ -16,3 +18,7 @@ backend/__pycache__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Markdown files (except README.md)
+*.md
+!README.md
