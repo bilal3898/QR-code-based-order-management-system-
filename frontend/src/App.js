@@ -6,7 +6,9 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import Layout from "./components/Layout/Layout";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Login from "./components/Auth/Login";
+import RoleBasedLogin from "./components/Auth/RoleBasedLogin";
 import Register from "./components/Auth/Register";
+import RoleBasedRegister from "./components/Auth/RoleBasedRegister";
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 import CustomerList from "./components/Customer/CustomerList";
 import CustomerForm from "./components/Customer/CustomerForm";
@@ -45,8 +47,51 @@ import "./services/styles/styles.css";
 import "./services/styles/responsive.css";
 
 const App = () => {
-  // Create Material-UI theme inside component
-  const theme = React.useMemo(() => createTheme(), []);
+  // Create Material-UI theme with beautiful colors
+  const theme = React.useMemo(() => createTheme({
+    palette: {
+      primary: {
+        main: '#1976d2',
+        light: '#42a5f5',
+        dark: '#1565c0',
+      },
+      secondary: {
+        main: '#9c27b0',
+        light: '#ba68c8',
+        dark: '#7b1fa2',
+      },
+      success: {
+        main: '#4caf50',
+        light: '#81c784',
+        dark: '#388e3c',
+      },
+      warning: {
+        main: '#ff9800',
+        light: '#ffb74d',
+        dark: '#f57c00',
+      },
+      error: {
+        main: '#f44336',
+        light: '#e57373',
+        dark: '#d32f2f',
+      },
+      background: {
+        default: '#f5f5f5',
+        paper: '#ffffff',
+      },
+    },
+    typography: {
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+      ].join(','),
+    },
+  }), []);
 
   return (
     <ThemeProvider theme={theme}>
@@ -55,8 +100,9 @@ const App = () => {
         <Router>
           <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<RoleBasedLogin />} />
+        <Route path="/register" element={<RoleBasedRegister />} />
+        <Route path="/tables/qr-scanner" element={<QRCodeScanner />} />
 
         <Route path="/dashboard" element={<ProtectedRoute><Layout><Dashboard /></Layout></ProtectedRoute>} />
 
