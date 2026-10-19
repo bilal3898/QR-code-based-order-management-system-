@@ -37,8 +37,8 @@ const RoleBasedLogin = () => {
     }));
   };
 
-  const handleLogin = async (role) => {
-    e.preventDefault();
+  const handleLogin = async (role, e) => {
+    if (e) e.preventDefault();
     setError('');
     setLoading(true);
 

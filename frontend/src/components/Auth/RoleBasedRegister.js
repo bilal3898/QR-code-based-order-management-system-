@@ -44,8 +44,8 @@ const RoleBasedRegister = () => {
     }));
   };
 
-  const handleRegister = async (role) => {
-    e.preventDefault();
+  const handleRegister = async (role, e) => {
+    if (e) e.preventDefault();
     setError('');
     setSuccess('');
 
